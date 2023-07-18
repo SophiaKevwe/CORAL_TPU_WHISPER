@@ -1,7 +1,9 @@
 sounddevice
 wavio
-openai-whisper
 redis
 torch
 speechrecognition
 audiomentations
+transformers
+pyaudio
+openai-whisper
