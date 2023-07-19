@@ -3,7 +3,7 @@ import argparse
 import io
 import os
 import speech_recognition as sr
-import whisper
+from openai_whisper import Whisper
 import torch
 
 from datetime import datetime, timedelta
@@ -64,7 +64,7 @@ def main():
     model = args.model
     if args.model != "large" and not args.non_english:
         model = model + ".en"
-    audio_model = whisper.load_model(model)
+    audio_model = Whisper(model)
     
     # included in the training
     model.config.forced_decoder_ids = None
