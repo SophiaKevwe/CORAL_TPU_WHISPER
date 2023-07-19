@@ -58,7 +58,7 @@ def main():
     
     # Important for linux users. 
     # Prevents permanent application hang and crash by using the wrong Microphone
-    source = sr.Microphone(sample_rate=48000)
+    source = sr.Microphone(sample_rate=16000)
         
     # Load / Download model
     model = args.model
